@@ -15,14 +15,12 @@ into :
 `"wpackagist-plugin/wordpress-seo":"*@stable"`
 
 This command is useful especially during an audit. It allows you to grab latest versions of your requirements.
-Once your audit is finished it's recommanded to use another command : [Freeze version](https://github.com/BeAPI/composer-freeze-version) to keep versions you have tested.
+Once your audit is finished it's recommended to use another command : [Freeze version](https://github.com/BeAPI/composer-freeze-version) to keep versions you have tested.
 
-## 1
-Add the following require dev into composer.json :
+## 1 [Composer](http://composer.rarst.net/)
 
-```
-"bea/make-stable": "dev-master"
-```
+- Add repository source : `{ "type": "vcs", "url": "https://github.com/BeAPI/composer-make-stable" }`.
+- Include `"bea/composer/make-stable": "dev-master"` in your composer file for last master's commits or a tag released.
 
 ## 2
 Then you can simply launch `composer make-stable` !
