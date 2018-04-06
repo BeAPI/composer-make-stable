@@ -1,0 +1,26 @@
+{
+    "name": "bea/make-stable",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BeAPI",
+            "email": "technical@beapi.fr"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "composer-plugin-api": "^1.1"
+    },
+    "require-dev": {
+        "composer/composer": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "BEA\\Composer\\MakeStablePlugin\\": "src"
+        }
+    },
+    "extra": {
+        "class": "BEA\\Composer\\MakeStablePlugin\\MakeStable"
+    }
+}
