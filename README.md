@@ -4,6 +4,9 @@
 
 Make all of your composer's dependencies stable.
 
+This command is useful especially during an audit. It allows you to grab latest versions of your requirements.
+Once your audit is finished it's recommended to use another command : [Freeze version](https://github.com/BeAPI/composer-freeze-version) to keep versions you have tested.
+
 # What ?
 
 Your dependencies into composer.json will be automatically be changed from :
@@ -14,17 +17,14 @@ into :
 
 `"wpackagist-plugin/wordpress-seo":"*@stable"`
 
-This command is useful especially during an audit. It allows you to grab latest versions of your requirements.
-Once your audit is finished it's recommended to use another command : [Freeze version](https://github.com/BeAPI/composer-freeze-version) to keep versions you have tested.
-
 ## 1 [Composer](http://composer.rarst.net/)
 
 - Add repository source : `{ "type": "vcs", "url": "https://github.com/BeAPI/composer-make-stable" }`.
 - Include `"bea/composer/make-stable": "dev-master"` in your composer file as require-dev.
+- Before use, launch `composer update`.
 
 ## 2 Run command
 Then you can simply launch `composer make-stable` !
-
 
 # Who ?
 
