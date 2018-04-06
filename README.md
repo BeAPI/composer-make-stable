@@ -17,13 +17,13 @@ into :
 
 `"wpackagist-plugin/wordpress-seo":"*@stable"`
 
-## 1 [Composer](http://composer.rarst.net/)
+## 1 - Add to [Composer](http://composer.rarst.net/)
 
 - Add repository source : `{ "type": "vcs", "url": "https://github.com/BeAPI/composer-make-stable" }`.
 - Include `"bea/composer/make-stable": "dev-master"` in your composer file as require-dev.
 - Before use, launch `composer update`.
 
-## 2 Run command
+## 2 - Run command
 Then you can simply launch `composer make-stable` !
 
 # Who ?
