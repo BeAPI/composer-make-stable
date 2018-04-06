@@ -22,7 +22,7 @@ Once your audit is finished it's recommended to use another command : [Freeze ve
 - Add repository source : `{ "type": "vcs", "url": "https://github.com/BeAPI/composer-make-stable" }`.
 - Include `"bea/composer/make-stable": "dev-master"` in your composer file for last master's commits or a tag released.
 
-## 2
+## 2 Run command
 Then you can simply launch `composer make-stable` !
 
 
