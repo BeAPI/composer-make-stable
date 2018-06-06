@@ -17,6 +17,10 @@ into :
 
 `"wpackagist-plugin/wordpress-seo":"*@stable"`
 
+![Composer Make Stable : how to)](https://blog.beapi.fr/wp-content/uploads/2018/06/bea-composer-make-stable.gif)
+
+# How ?
+
 ## 1 - Add to [Composer](http://composer.rarst.net/)
 
 - Add repository source : `{ "type": "vcs", "url": "https://github.com/BeAPI/composer-make-stable" }`.
