@@ -49,12 +49,20 @@ class MakeStableCommand extends BaseCommand {
 			$composerJson = $composerFile->read();
 			if ( isset( $composerJson['require'] ) ) {
 				foreach ( $composerJson['require'] as $package => $version ) {
+					if ( 'dev-master' === $composerJson['require'][ $package ] ) {
+						continue;
+					}
+
 					$composerJson['require'][ $package ] = $this->stable;
 				}
 			}
 
 			if ( isset( $composerJson['require-dev'] ) ) {
 				foreach ( $composerJson['require-dev'] as $package => $version ) {
+					if ( 'dev-master' === $composerJson['require-dev'][ $package ] ) {
+						continue;
+					}
+
 					$composerJson['require-dev'][ $package ] = $this->stable;
 				}
 			}
