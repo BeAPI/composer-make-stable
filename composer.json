@@ -1,5 +1,5 @@
 {
-    "name": "bea/composer-make-stable",
+    "name": "beapi/composer-make-stable",
     "type": "composer-plugin",
     "license": "MIT",
     "authors": [
