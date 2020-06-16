@@ -22,8 +22,7 @@ into :
 # How ?
 
 ## 1 - Add to Composer
-
-- Make `composer require "bea/composer/make-stable": "dev-master" --dev`.
+Run `composer require "beapi/composer-make-stable": "dev-master" --dev`.
 
 ## 2 - Run command
 Then you can simply launch `composer make-stable` !
