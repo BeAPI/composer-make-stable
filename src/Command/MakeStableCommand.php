@@ -26,23 +26,23 @@ class MakeStableCommand extends BaseCommand {
 		$output->writeln( "<info>Before proceeding please make sure all your requires have the appropriate minimum stability & some releases !</info>" );
 
 		if ( false === $io->askConfirmation(
-				"Do you really want to set all requires as \"*@stable\" version ?",
+				"Do you really want to set all requires as \"*@stable\" version (y/n) ? ",
 				true ) ) {
-			exit;
+			return 0;
 		}
 
 		$composerPath = $composer->getConfig()->getConfigSource()->getName();
 		$composerFile = new JsonFile( $composerPath );
 		if ( ! $composerFile->exists() ) {
 			$output->writeln( "<error>Composer file not found.</error>" );
-			exit;
+			return 1;
 		}
 
 		// if we cannot write then bail
-		if ( ! is_writeable( $composerPath ) ) {
+		if ( ! is_writable( $composerPath ) ) {
 			$output->writeln( "<error>The composer.json file cannot be rewritten !</error>" );
 			$output->writeln( "<error>Please check your file permissions.</error>" );
-			exit;
+			return 1;
 		}
 
 		try {
@@ -69,10 +69,11 @@ class MakeStableCommand extends BaseCommand {
 
 			$composerFile->write( $composerJson );
 			$output->writeln( "All requires are now at \"*@stable\" version \o/" );
+			return 0;
 		} catch ( RuntimeException $e ) {
 			$output->writeln( "<error>An error occurred</error>" );
 			$output->writeln( sprintf( "<error>%s</error>", $e->getMessage() ) );
-			exit;
+			return 1;
 		}
 	}
 }
